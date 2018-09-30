@@ -1,5 +1,6 @@
 const fetch = require('cross-fetch');
 const moment = require('moment');
+var Buffer = require('buffer/').Buffer
 const baseUrl = 'https://hsp-prod.rockshore.net/api/v1/serviceMetrics';
 
 const getDayId = function (date) {

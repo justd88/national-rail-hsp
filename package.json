@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/justd88/national-rail-hsp#readme",
   "dependencies": {
+    "buffer": "^5.2.1",
     "cross-fetch": "^2.2.2",
     "moment": "^2.22.2"
   }

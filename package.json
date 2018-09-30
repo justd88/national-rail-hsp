@@ -1,0 +1,27 @@
+{
+  "name": "national-rail-hsp",
+  "version": "0.1.0",
+  "description": "National Rail HSP Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justd88/national-rail-hsp.git"
+  },
+  "keywords": [
+    "nationalrail",
+    "HSP"
+  ],
+  "author": "Dominik Nsosso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justd88/national-rail-hsp/issues"
+  },
+  "homepage": "https://github.com/justd88/national-rail-hsp#readme",
+  "dependencies": {
+    "cross-fetch": "^2.2.2",
+    "moment": "^2.22.2"
+  }
+}

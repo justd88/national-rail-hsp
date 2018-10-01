@@ -1,7 +1,7 @@
 const fetch = require('cross-fetch');
 const moment = require('moment');
 var Buffer = require('buffer/').Buffer
-const baseUrl = 'https://hsp-prod.rockshore.net/api/v1/serviceMetrics';
+const baseUrl = 'https://hsp-prod.rockshore.net/api/v1';
 
 const getDayId = function (date) {
     const dayNumber = moment(date, 'YYYY-MM-DD').isoWeekday();
@@ -24,7 +24,7 @@ const HSP = function (username, password) {
     this.headers = getHeaders(username, password);
 }
 HSP.prototype.getServiceMetrics = function (from_loc, to_loc, from_time, to_time, from_date, to_date, days) {
-    return fetch(baseUrl, {
+    return fetch(`${baseUrl}/serviceMetrics`, {
         headers: this.headers,
         method: 'POST',
         body: JSON.stringify({
@@ -67,7 +67,7 @@ HSP.prototype.getServiceMetricsSimple = function (from_loc, to_loc, from_time, f
 }
 
 HSP.prototype.getServiceDetails = function (rid) {
-    return fetch(baseUrl, {
+    return fetch(`${baseUrl}/serviceDetails`, {
         headers: this.headers,
         method: 'POST',
         body: JSON.stringify({

@@ -49,21 +49,7 @@ HSP.prototype.getServiceMetricsSimple = function (from_loc, to_loc, from_time, f
         moment(`${from_date}`, 'YYYY-MM-DD')
             .add(1, 'day')
             .format('YYYY-MM-DD');
-    return fetch(baseUrl, {
-        headers: this.headers,
-        method: 'POST',
-        body: JSON.stringify({
-            from_loc,
-            to_loc,
-            from_time,
-            to_time,
-            from_date,
-            to_date,
-            days
-        })
-    }).then(function (response) {
-        return response.json()
-    });
+    return this.getServiceMetrics(from_loc, to_loc, from_time, to_time, from_date, to_date, days); 
 }
 
 HSP.prototype.getServiceDetails = function (rid) {
